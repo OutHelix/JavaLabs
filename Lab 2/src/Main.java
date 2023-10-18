@@ -3,7 +3,6 @@ public class Main {
         Watch watch = new Watch("Apple", 500, "Black", "Leather", true);
         Smartphone smartphone = new Smartphone("Samsung", 1000, "Blue", "Android", 6);
         Laptop laptop = new Laptop("Dell", 1500, "Silver", 15, 8);
-
         watch.describeFeatures();
         System.out.println();
         watch.turnOn();
@@ -19,7 +18,6 @@ public class Main {
     }
 }
 
-// Абстрактный класс Гаджеты
 abstract class Gadgets {
     protected String brand;
     protected int price;
@@ -63,7 +61,6 @@ abstract class Gadgets {
         this.color = color;
     }
 
-    // Статический метод для получения количества созданных объектов
     public static int getCounter() {
         return counter;
     }

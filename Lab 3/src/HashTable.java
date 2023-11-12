@@ -1,6 +1,6 @@
 import java.util.LinkedList;
 
-public class ProductHashTable {
+public class HashTable {
     private static class Product {
         private String name;
         private double price;
@@ -37,7 +37,7 @@ public class ProductHashTable {
     private final LinkedList<Entry<String, Product>>[] table;
     private int size;
 
-    public ProductHashTable(int capacity) {
+    public HashTable(int capacity) {
         table = new LinkedList[capacity];
         size = 0;
     }
@@ -118,7 +118,7 @@ public class ProductHashTable {
 
 
     public static void main(String[] args) {
-        ProductHashTable table = new ProductHashTable(10);
+        HashTable table = new HashTable(10);
 
         Product product1 = new Product("apple", 1.99, 10);
         Product product2 = new Product("banana", 2.99, 5);

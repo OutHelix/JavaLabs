@@ -34,6 +34,28 @@ public class HashTable {
         }
     }
 
+    private static class Entry<K, V> {
+        private K key;
+        private V value;
+
+        public Entry(K key, V value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        public K getKey() {
+            return key;
+        }
+
+        public V getValue() {
+            return value;
+        }
+
+        public void setValue(V value) {
+            this.value = value;
+        }
+    }
+
     private final LinkedList<Entry<String, Product>>[] table;
     private int size;
 
@@ -94,29 +116,6 @@ public class HashTable {
         return Math.abs(key.hashCode() % table.length);
     }
 
-    private static class Entry<K, V> {
-        private K key;
-        private V value;
-
-        public Entry(K key, V value) {
-            this.key = key;
-            this.value = value;
-        }
-
-        public K getKey() {
-            return key;
-        }
-
-        public V getValue() {
-            return value;
-        }
-
-        public void setValue(V value) {
-            this.value = value;
-        }
-    }
-
-
     public static void main(String[] args) {
         HashTable table = new HashTable(10);
 
@@ -129,6 +128,9 @@ public class HashTable {
         table.put("banana", product2);
         table.put("jam", product3);
         table.put("kiwi", product4);
+        System.out.println(table.get("banana"));
+        product2.setQuantity(7);
+        System.out.println(table.get("banana"));
 
         System.out.println(table.get("jam"));
         System.out.println(table.get("kiwi"));

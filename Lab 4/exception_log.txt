@@ -1,0 +1,4 @@
+Exception occurred: CustomDivisionException - Деление на ноль недопустимо
+Exception occurred: CustomDivisionException - Деление на ноль недопустимо
+[Sun Nov 19 16:21:21 MSK 2023] Exception occurred: CustomDivisionException - Деление на ноль недопустимо
+[2023-11-19 16:22:12] Exception occurred: CustomDivisionException - Деление на ноль недопустимо

@@ -66,7 +66,6 @@ abstract class Gadgets {
     }
 
 
-    // Абстрактные методы, описывающие поведение гаджетов
     public abstract void turnOn();
 
     public abstract void turnOff();
@@ -74,7 +73,6 @@ abstract class Gadgets {
     public abstract void describeFeatures();
 }
 
-// Класс Часы - наследник класса Гаджеты
 class Watch extends Gadgets {
     private String strapType;
     private boolean isWaterproof;
@@ -122,7 +120,6 @@ class Watch extends Gadgets {
 
 }
 
-// Класс Смартфон - наследник класса Гаджеты
 class Smartphone extends Gadgets {
     private String operatingSystem;
     private int screenSize;
@@ -169,7 +166,6 @@ class Smartphone extends Gadgets {
     }
 }
 
-// Класс Ноутбук - наследник класса Гаджеты
 class Laptop extends Gadgets {
     private int screenSize;
     private int ramSize;

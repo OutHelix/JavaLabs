@@ -11,9 +11,9 @@ public class DivisionProgram {
 
         try {
             double result = divideNumbers(numerator, denominator);
-            System.out.println("Результат деления: " + result);
+            System.out.println("Answer: " + result);
         } catch (CustomDivisionException e) {
-            System.out.println("Ошибка деления: " + e.getMessage());
+            System.out.println("Error: " + e.getMessage());
             logException(e);
         }
     }
@@ -21,7 +21,7 @@ public class DivisionProgram {
     // Метод для деления чисел с возможным исключением CustomDivisionException
     public static double divideNumbers(int numerator, int denominator) throws CustomDivisionException {
         if (denominator == 0) {
-            throw new CustomDivisionException("Деление на ноль недопустимо");
+            throw new CustomDivisionException("Division by zero is not allowed.");
         }
         return (double) numerator / denominator;
     }
@@ -34,7 +34,7 @@ public class DivisionProgram {
             String formattedTime = currentTime.format(formatter);
             writer.write("[" + formattedTime + "] Exception occurred: " + e.getClass().getName() + " - " + e.getMessage() + "\n");
         } catch (IOException ex) {
-            System.out.println("Ошибка записи в файл лога исключений: " + ex.getMessage());
+            System.out.println("The error writing to the exception log file: " + ex.getMessage());
         }
     }
 }

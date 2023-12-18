@@ -1,12 +1,19 @@
 import java.util.regex.*;
 
-public class NumberFinder { // -- 1
+public class NumberFinder {
     public static void main(String[] args) {
-        String text = "The price of the product is $19.99 and 50% discount";
-        Pattern pattern = Pattern.compile("\\b\\d+(\\.\\d+)?\\b");
-        Matcher matcher = pattern.matcher(text);
+        String string = "The  price of  the product is $";
+        Pattern pattern = Pattern.compile("-?\\d+(\\.\\d+)?");
+        Matcher matcher = pattern.matcher(string);
+        boolean numbersFound = false; // Переменная для отслеживания найденных чисел
+
         while (matcher.find()) {
+            numbersFound = true; // Если числа найдены, устанавливаем флаг в true
             System.out.println(matcher.group());
+        }
+
+        if (!numbersFound) {
+            System.out.println("В данном тексте не найдено чисел.");
         }
     }
 }
